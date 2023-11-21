@@ -9,14 +9,6 @@ const directoryPath = path.join(__dirname, '../front/html');
 
 app.use('/', express.static(directoryPath));
 
-// Vérifie si le répertoire existe
-fs.access(directoryPath, fs.constants.F_OK, (err) => {
-  if (err) {
-    console.error(`Le répertoire ${directoryPath} n'existe pas`);
-  } else {
-    console.log(`Le répertoire ${directoryPath} existe`);
-  }
-});
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
