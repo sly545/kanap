@@ -194,7 +194,7 @@ produitEnregistrerDansLocalStorage.forEach((items) => {
 
 //post sur l'api 
 
- const options = fetch(`http://localhost:8888/api/products/order`, {
+ const options = fetch(`https://kanap-production-48f2.up.railway.app/`, {
     method: "POST",
     body: JSON.stringify(object),
     headers: { "Content-Type": "application/json" },
