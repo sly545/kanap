@@ -20,4 +20,10 @@ app.use(express.json());
 
 app.use('/api/products', productRoutes);
 
+app.use('/', express.static(path.join(__dirname, '../front')));
+
+ 
+ 
+ 
+
 module.exports = app;

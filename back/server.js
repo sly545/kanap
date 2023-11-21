@@ -1,5 +1,22 @@
 const http = require('http');
 const app = require('./app');
+const express = require('express');
+const path = require('path');
+
+const fs = require('fs');
+// Votre chemin actuel
+const directoryPath = path.join(__dirname, '../front/html');
+
+app.use('/', express.static(directoryPath));
+
+// Vérifie si le répertoire existe
+fs.access(directoryPath, fs.constants.F_OK, (err) => {
+  if (err) {
+    console.error(`Le répertoire ${directoryPath} n'existe pas`);
+  } else {
+    console.log(`Le répertoire ${directoryPath} existe`);
+  }
+});
 
 const normalizePort = val => {
   const port = parseInt(val, 10);
@@ -12,7 +29,7 @@ const normalizePort = val => {
   }
   return false;
 };
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 const errorHandler = error => {
