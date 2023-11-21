@@ -5,7 +5,7 @@ let ID = params.get("ID");
 // Fonction principale pour récupérer les détails du produit depuis l'API
 function fetchkanap() {
   // Appel à l'API pour obtenir les informations du produit
-  fetch(`http://localhost:7301/api/products/${ID}`)
+  fetch(`http://localhost:8888/api/products/${ID}`)
     .then(convertJSON) // Convertit la réponse en JSON
     .then(function (dataFromAPI) {
       // Extraction des données du produit depuis la réponse de l'API
