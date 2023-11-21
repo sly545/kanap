@@ -5,7 +5,7 @@
 function fetchKanap() {
   // On effectue un call à une API
   // => On envoie une requete à une API pour lui demander des informations
-  fetch("http://localhost:3000/api/products") // On déclenche la requete sur l'URL suivante (= endpoint => là où notre API nous délivre des données)
+  fetch("http://localhost:7301/api/products") // On déclenche la requete sur l'URL suivante (= endpoint => là où notre API nous délivre des données)
     .then(convertJSON)
     .then(insertProductsOnDOM);
 };

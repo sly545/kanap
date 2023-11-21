@@ -194,7 +194,7 @@ produitEnregistrerDansLocalStorage.forEach((items) => {
 
 //post sur l'api 
 
- const options = fetch(`http://localhost:3000/api/products/order`, {
+ const options = fetch(`http://localhost:7301/api/products/order`, {
     method: "POST",
     body: JSON.stringify(object),
     headers: { "Content-Type": "application/json" },
