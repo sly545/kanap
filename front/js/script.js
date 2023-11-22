@@ -5,7 +5,7 @@
 function fetchKanap() {
   // On effectue un call à une API
   // => On envoie une requete à une API pour lui demander des informations
-  fetch("https://kanap-production-48f2.up.railway.app/") // On déclenche la requete sur l'URL suivante (= endpoint => là où notre API nous délivre des données)
+  fetch("https://kanap-production-48f2.up.railway.app/api/products") // On déclenche la requete sur l'URL suivante (= endpoint => là où notre API nous délivre des données)
     .then(convertJSON)
     .then(insertProductsOnDOM);
 };
